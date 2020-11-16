@@ -5,9 +5,12 @@
         
         public static void LaunchPotencia2Menu()
         {
-            int number = ControllerUtils.ReadIntegerInput("Dime el numero que desear elevar al cuadrado:");
-            int result = number * number;
-            System.Console.WriteLine(result);
+            int number = ControllerUtils.ReadIntegerInput("Dime el exponente:");
+            for (int a = 0; a < number; a++)
+            {
+                int result = 2 * 2;
+            }
+            System.Console.WriteLine();
         }
 
         public static void LaunchMainMenu()
