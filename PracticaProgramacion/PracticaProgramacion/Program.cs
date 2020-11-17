@@ -6,11 +6,12 @@
         public static void LaunchPotencia2Menu()
         {
             int number = ControllerUtils.ReadIntegerInput("Dime el exponente:");
-            for (int a = 0; a < number; a++)
+            int result = 2;
+            for (int a = 1; a < number; a++)
             {
-                int result = 2 * 2;
+                result *= 2;
             }
-            System.Console.WriteLine();
+            System.Console.WriteLine(result);
         }
 
         public static void LaunchMainMenu()
