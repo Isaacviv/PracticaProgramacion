@@ -5,13 +5,35 @@
         
         public static void LaunchPotencia2Menu()
         {
-            int number = ControllerUtils.ReadIntegerInput("Dime el exponente:");
-            int result = 2;
-            for (int a = 1; a < number; a++)
+            while (true)
             {
-                result *= 2;
+                System.Console.Clear();
+                UserInterface.PrintPotencia2Menu();
+                int number = ControllerUtils.ReadIntegerInput("Dime el exponente:");
+                int result = 2;
+                for (int a = 1; a < number; a++)
+                {
+                    result *= 2;
+                }
+                System.Console.WriteLine("El resultado es: " + result);
+                System.Console.ReadLine();
+                break;
             }
-            System.Console.WriteLine(result);
+        }
+        public static void LaunchSumatorioMenu()
+        {
+            int number = ControllerUtils.ReadIntegerInput("Dime el numero del que quieres que realice el sumatorio");
+            int result = 0;
+            for (int a = 0; a < number; a++)
+            {
+                int sumatorio = 0;
+                for (int b = 0; b < a + 1; b++)
+                {
+                    sumatorio += 1;
+                }
+                result += sumatorio;
+            }
+            System.Console.WriteLine("El resultado es: " + result);
         }
 
         public static void LaunchMainMenu()
@@ -32,6 +54,10 @@
                 else if (option == 0)
                 {
                     break;
+                }
+                else if (option == 2)
+                {
+                    LaunchSumatorioMenu();
                 }
             }
         }

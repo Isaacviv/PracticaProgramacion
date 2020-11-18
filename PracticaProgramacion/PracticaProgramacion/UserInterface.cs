@@ -15,6 +15,13 @@
             System.Console.WriteLine("0) Salir del programa");
         }
 
+        public static void PrintPotencia2Menu()
+        {
+            System.Console.WriteLine("--------------------");
+            System.Console.WriteLine("Potencia en base 2");
+            System.Console.WriteLine("--------------------");
+        }
+
         /// <summary>
         /// 
         /// </summary>
