@@ -69,6 +69,21 @@
             }
         }
 
+        public static void LaunchIsPrimeMenu()
+        {
+            while (true)
+            {
+                System.Console.Clear();
+                UserInterface.PrintIsPrimeMenu();
+                int number = ControllerUtils.ReadIntegerInput("Dime el numero del que quieres saber si es primo");
+                int aux = 0;
+                
+                System.Console.WriteLine("Pulsa cualquier tecla para volver al menu principal");
+                System.Console.ReadLine();
+                break;
+            }
+        }
+
         public static void LaunchMainMenu()
         {
             while (true)
@@ -95,6 +110,10 @@
                 else if (option == 3)
                 {
                     LaunchFactorialMenu();
+                }
+                else if (option == 4)
+                {
+                    LaunchIsPrimeMenu();
                 }
             }
         }
