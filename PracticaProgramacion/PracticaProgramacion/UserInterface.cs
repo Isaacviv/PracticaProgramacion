@@ -22,6 +22,34 @@
             System.Console.WriteLine("--------------------");
         }
 
+        public static void PrintSumatorioMenu()
+        {
+            System.Console.WriteLine("-----------------------");
+            System.Console.WriteLine("Sumatorio de numeros");
+            System.Console.WriteLine("-----------------------");
+        }
+
+        public static void PrintFactorialMenu()
+        {
+            System.Console.WriteLine("------------------------");
+            System.Console.WriteLine("Factorial de un numero");
+            System.Console.WriteLine("------------------------");
+        }
+
+        public static void PrintIsPrimeMenu()
+        {
+            System.Console.WriteLine("-----------------------------");
+            System.Console.WriteLine("Saber si un numero es primo");
+            System.Console.WriteLine("-----------------------------");
+        }
+
+        public static void PrintFibonacciMenu()
+        {
+            System.Console.WriteLine("-----------------------");
+            System.Console.WriteLine("Sucesion de Fibonacci");
+            System.Console.WriteLine("-----------------------");
+        }
+
         /// <summary>
         /// 
         /// </summary>

@@ -16,24 +16,57 @@
                     result *= 2;
                 }
                 System.Console.WriteLine("El resultado es: " + result);
+                System.Console.WriteLine("Pulsa cualquier tecla para volver al menu principal");
                 System.Console.ReadLine();
                 break;
             }
         }
         public static void LaunchSumatorioMenu()
         {
-            int number = ControllerUtils.ReadIntegerInput("Dime el numero del que quieres que realice el sumatorio");
-            int result = 0;
-            for (int a = 0; a < number; a++)
+            while (true)
             {
-                int sumatorio = 0;
-                for (int b = 0; b < a + 1; b++)
+                System.Console.Clear();
+                UserInterface.PrintSumatorioMenu();
+                int number = ControllerUtils.ReadIntegerInput("Dime el numero del que quieres que realice el sumatorio");
+                int result = 0;
+                for (int a = 0; a < number; a++)
                 {
-                    sumatorio += 1;
+                    int sumatorio = 0;
+                    for (int b = 0; b < a + 1; b++)
+                    {
+                        sumatorio += 1;
+                    }
+                    result += sumatorio;
                 }
-                result += sumatorio;
+                System.Console.WriteLine("El resultado es: " + result);
+                System.Console.WriteLine("Pulsa cualquier tecla para volver al menu principal");
+                System.Console.ReadLine();
+                break;
             }
-            System.Console.WriteLine("El resultado es: " + result);
+        }
+
+        public static void LaunchFactorialMenu()
+        {
+            while (true)
+            {
+                System.Console.Clear();
+                UserInterface.PrintFactorialMenu();
+                int number = ControllerUtils.ReadIntegerInput("Dime el numero del que deseas saber el factorial");
+                int result = 1;
+                for (int a = 0; a < number; a++)
+                {
+                    int factorial = 0;
+                    for (int b = 0; b <= a; b++)
+                    {
+                        factorial += 1;
+                    }
+                    result *= factorial;
+                }
+                System.Console.WriteLine("El resultado es: " + result);
+                System.Console.WriteLine("Pulsa cualquier tecla para volver al menu principal");
+                System.Console.ReadLine();
+                break;
+            }
         }
 
         public static void LaunchMainMenu()
@@ -58,6 +91,10 @@
                 else if (option == 2)
                 {
                     LaunchSumatorioMenu();
+                }
+                else if (option == 3)
+                {
+                    LaunchFactorialMenu();
                 }
             }
         }
