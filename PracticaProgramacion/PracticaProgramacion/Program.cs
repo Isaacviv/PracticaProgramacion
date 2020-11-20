@@ -10,12 +10,7 @@
                 System.Console.Clear();
                 UserInterface.PrintPotencia2Menu();
                 int number = ControllerUtils.ReadIntegerInput("Dime el exponente:");
-                int result = 2;
-                for (int a = 1; a < number; a++)
-                {
-                    result *= 2;
-                }
-                System.Console.WriteLine("El resultado es: " + result);
+                System.Console.WriteLine("El resultado es: " + Model.CalcularPotencia2(number));
                 System.Console.WriteLine("Pulsa cualquier tecla para volver al menu principal");
                 System.Console.ReadLine();
                 break;
@@ -28,17 +23,7 @@
                 System.Console.Clear();
                 UserInterface.PrintSumatorioMenu();
                 int number = ControllerUtils.ReadIntegerInput("Dime el numero del que quieres que realice el sumatorio");
-                int result = 0;
-                for (int a = 0; a < number; a++)
-                {
-                    int sumatorio = 0;
-                    for (int b = 0; b < a + 1; b++)
-                    {
-                        sumatorio += 1;
-                    }
-                    result += sumatorio;
-                }
-                System.Console.WriteLine("El resultado es: " + result);
+                System.Console.WriteLine("El resultado es: " + Model.CalcularSumatorio(number));
                 System.Console.WriteLine("Pulsa cualquier tecla para volver al menu principal");
                 System.Console.ReadLine();
                 break;
@@ -52,17 +37,7 @@
                 System.Console.Clear();
                 UserInterface.PrintFactorialMenu();
                 int number = ControllerUtils.ReadIntegerInput("Dime el numero del que deseas saber el factorial");
-                int result = 1;
-                for (int a = 0; a < number; a++)
-                {
-                    int factorial = 0;
-                    for (int b = 0; b <= a; b++)
-                    {
-                        factorial += 1;
-                    }
-                    result *= factorial;
-                }
-                System.Console.WriteLine("El resultado es: " + result);
+                System.Console.WriteLine("El resultado es: " + Model.CalcularFactorial(number));
                 System.Console.WriteLine("Pulsa cualquier tecla para volver al menu principal");
                 System.Console.ReadLine();
                 break;
@@ -97,7 +72,7 @@
                 System.Console.Clear();
                 UserInterface.PrintFibonacciMenu();
                 int number = ControllerUtils.ReadIntegerInput("Dime hasta que numero quiers que te muestre la sucesion de fibonacci");
-                Model.Fibonacci(number);
+                Model.SucesionFibonacci(number);
                 System.Console.WriteLine("Pulsa cualquier tecla para volver al menu principal");
                 System.Console.ReadLine();
                 break;
