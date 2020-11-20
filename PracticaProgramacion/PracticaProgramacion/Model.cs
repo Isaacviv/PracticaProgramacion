@@ -15,6 +15,19 @@
             }
             return true;
         }
+
+        public static void Fibonacci(int number)
+        {
+            int number1 = 0;
+            int number2 = 1;
+            for (int i = 0; i < number; i++)
+            {
+                System.Console.Write(number1 + ", ");
+                number1 = number2 - number1;
+                number2 = number1 + number2;
+                
+            }
+        }
     }
     
 

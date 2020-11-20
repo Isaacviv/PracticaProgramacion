@@ -90,6 +90,20 @@
             }
         }
 
+        public static void LaunchFibonacciMenu()
+        {
+            while (true)
+            {
+                System.Console.Clear();
+                UserInterface.PrintFibonacciMenu();
+                int number = ControllerUtils.ReadIntegerInput("Dime hasta que numero quiers que te muestre la sucesion de fibonacci");
+                Model.Fibonacci(number);
+                System.Console.WriteLine("Pulsa cualquier tecla para volver al menu principal");
+                System.Console.ReadLine();
+                break;
+            }
+        }
+
         public static void LaunchMainMenu()
         {
             while (true)
@@ -97,30 +111,22 @@
                 UserInterface.PrintMainMenu();
                 int option = UserInterface.ReadMenuOption();
                 if (option == 1)
-                {
                     LaunchPotencia2Menu();
-                }
                 else if (option == -1)
                 {
                     System.Console.Clear();
                     System.Console.WriteLine("La entrada que has introducido es incorrecta");
                 }
                 else if (option == 0)
-                {
                     break;
-                }
                 else if (option == 2)
-                {
                     LaunchSumatorioMenu();
-                }
                 else if (option == 3)
-                {
                     LaunchFactorialMenu();
-                }
                 else if (option == 4)
-                {
                     LaunchIsPrimeMenu();
-                }
+                else if (option == 5)
+                    LaunchFibonacciMenu();
             }
         }
         static void Main(string[] args)
