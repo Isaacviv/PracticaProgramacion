@@ -76,8 +76,14 @@
                 System.Console.Clear();
                 UserInterface.PrintIsPrimeMenu();
                 int number = ControllerUtils.ReadIntegerInput("Dime el numero del que quieres saber si es primo");
-                int aux = 0;
-                
+                if (Model.IsPrime(number) == false)
+                {
+                    System.Console.WriteLine("El numero que has escrito no es primo");
+                }
+                else
+                {
+                    System.Console.WriteLine("El numero que has escrito es primo");
+                }
                 System.Console.WriteLine("Pulsa cualquier tecla para volver al menu principal");
                 System.Console.ReadLine();
                 break;
