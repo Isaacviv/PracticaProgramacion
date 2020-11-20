@@ -2,6 +2,12 @@
 {
     class ControllerUtils
     {
+        /// <summary>
+        /// Esta funcion controla que se pase un numero al programa y si no se le pasara al programa cualquier cosa que no sea un numero
+        /// se le volveria a pedir un numero al usuario
+        /// </summary>
+        /// <param name="Message">El texto que debe aparecer para pedir un numero al usuario</param>
+        /// <returns>La funcion unicamente devuelve un numero</returns>
         public static int ReadIntegerInput(string Message)
         {
             while (true)
