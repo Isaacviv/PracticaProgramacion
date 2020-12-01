@@ -36,7 +36,7 @@
             {
                 System.Console.Clear();
                 UserInterface.PrintFactorialMenu();
-                int number = ControllerUtils.ReadIntegerInput("Dime el numero del que deseas saber el factorial");
+                long number = ControllerUtils.ReadIntegerInput("Dime el numero del que deseas saber el factorial");
                 System.Console.WriteLine("El resultado es: " + Model.CalcularFactorial(number));
                 System.Console.WriteLine("Pulsa cualquier tecla para volver al menu principal");
                 System.Console.ReadLine();
@@ -83,17 +83,13 @@
         {
             while (true)
             {
+                System.Console.Clear();
                 UserInterface.PrintMainMenu();
                 int option = UserInterface.ReadMenuOption();
-                if (option == 1)
-                    LaunchPotencia2Menu();
-                else if (option == -1)
-                {
-                    System.Console.Clear();
-                    System.Console.WriteLine("La entrada que has introducido es incorrecta");
-                }
-                else if (option == 0)
+                if (option == 0)
                     break;
+                else if (option == 1)
+                    LaunchPotencia2Menu();
                 else if (option == 2)
                     LaunchSumatorioMenu();
                 else if (option == 3)
@@ -102,9 +98,14 @@
                     LaunchIsPrimeMenu();
                 else if (option == 5)
                     LaunchFibonacciMenu();
+                else if (option == -1)
+                {
+                    System.Console.Clear();
+                    System.Console.WriteLine("La entrada que has introducido es incorrecta");
+                }
             }
         }
-        static void Main(string[] args)
+            static void Main(string[] args)
         {
             LaunchMainMenu();
         }
