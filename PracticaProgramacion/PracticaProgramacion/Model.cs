@@ -40,13 +40,13 @@
         /// </summary>
         /// <param name="number">El numero del que se desea calcular el factorial</param>
         /// <returns>Devuelve el resultado del factorial</returns>
-        public static long CalcularFactorial(long number)
+        public static int CalcularFactorial(int number)
         {
-            long result = 1;
-            for (long a = 0; a < number; a++)
+            int result = 1;
+            for (int a = 0; a < number; a++)
             {
-                long factorial = 0;
-                for (long b = 0; b <= a; b++)
+                int factorial = 0;
+                for (int b = 0; b <= a; b++)
                 {
                     factorial += 1;
                 }

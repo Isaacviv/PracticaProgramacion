@@ -20,56 +20,41 @@
 
         public static void PrintPotencia2Menu()
         {
-            System.Console.BackgroundColor = System.ConsoleColor.Cyan;
-            System.Console.ForegroundColor = System.ConsoleColor.DarkMagenta;
             System.Console.WriteLine("--------------------");
             System.Console.WriteLine("Potencia en base 2");
             System.Console.WriteLine("--------------------");
-            System.Console.ResetColor();
             System.Console.WriteLine("Calcular 2 elevado a cualquier numero");
         }
 
         public static void PrintSumatorioMenu()
         {
-            System.Console.BackgroundColor = System.ConsoleColor.Gray;
-            System.Console.ForegroundColor = System.ConsoleColor.DarkCyan;
             System.Console.WriteLine("-----------------------");
             System.Console.WriteLine("Sumatorio de numeros");
             System.Console.WriteLine("-----------------------");
-            System.Console.ResetColor();
             System.Console.WriteLine("Calcular el sumatoria de cualquier numero");
         }
 
         public static void PrintFactorialMenu()
         {
-            System.Console.BackgroundColor = System.ConsoleColor.Yellow;
-            System.Console.ForegroundColor = System.ConsoleColor.DarkMagenta;
             System.Console.WriteLine("------------------------");
             System.Console.WriteLine("Factorial de un numero");
             System.Console.WriteLine("------------------------");
-            System.Console.ResetColor();
             System.Console.WriteLine("Calcular el factorial de cualquier numero");
         }
 
         public static void PrintIsPrimeMenu()
         {
-            System.Console.BackgroundColor = System.ConsoleColor.Yellow;
-            System.Console.ForegroundColor = System.ConsoleColor.DarkRed;
             System.Console.WriteLine("----------------");
             System.Console.WriteLine("Numeros primos");
             System.Console.WriteLine("----------------");
-            System.Console.ResetColor();
             System.Console.WriteLine("Saber si un numero es o no primo");
         }
 
         public static void PrintFibonacciMenu()
         {
-            System.Console.BackgroundColor = System.ConsoleColor.DarkCyan;
-            System.Console.ForegroundColor = System.ConsoleColor.White;
             System.Console.WriteLine("-----------------------");
             System.Console.WriteLine("Sucesion de Fibonacci");
             System.Console.WriteLine("-----------------------");
-            System.Console.ResetColor();
             System.Console.WriteLine("Mostrar la sucesion de fibonacci hasta cualquier numero");
         }
 
